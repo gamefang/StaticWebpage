@@ -18,16 +18,12 @@ async function main() {
             const pyResponse = await fetch("analysis.py");
             const pyCode = await pyResponse.text();
 
-            // 将用户输入和 CSV 数据传递给 Python
-            pyodide.globals.set("userInput", userInput);
-            pyodide.globals.set("csvData", csvData);
-
             // 运行 Python 代码
             await pyodide.runPythonAsync(pyCode);
 
             // 调用 Python 函数
             const analyze_csv = pyodide.globals.get("analyze_csv");
-            const output = analyze_csv();
+            const output = analyze_csv(csvData, userInput);
 
             // 将多行文本转换为 HTML 格式
             const formattedOutput = output.replace(/\n/g, "<br>");

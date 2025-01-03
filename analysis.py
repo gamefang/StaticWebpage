@@ -1,7 +1,7 @@
 import csv
 import io
 
-def analyze_csv():
+def analyze_csv(csvData, userInput):
     # 将 CSV 数据加载到内存
     csv_file = io.StringIO(csvData)
     reader = csv.DictReader(csv_file)
