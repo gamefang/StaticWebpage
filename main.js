@@ -1,7 +1,7 @@
 async function main() {
     // 初始化 Pyodide
     let pyodide = await loadPyodide({
-        indexURL: "https://cdn.jsdelivr.net/pyodide/v0.23.4/full/",
+        indexURL: "pyodide/",
     });
 
     // 绑定分析按钮
