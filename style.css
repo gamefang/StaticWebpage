@@ -7,18 +7,18 @@ h1 {
     color: #333;
 }
 
-#userInput {
+#user_input {
     padding: 5px;
     font-size: 16px;
 }
 
-#analyzeButton {
+#btn_analyse {
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
 }
 
-#output {
+#txt_output {
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #ccc;
